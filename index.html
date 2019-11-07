@@ -7,28 +7,33 @@
   <title>Form Demo</title>
   <style>
     form {
+      font-family: sans-serif;
       background-color:beige;
     }
     legend {
       background-color: white;
       color:rgb(127, 214, 255);
       border: 1px solid black;
-      
     }
   </style>
 </head>
 <body>
-    <form>
+    <form
+    action="mailto:tbla3900@stu.raritanval.edu"
+    method="POST"
+  enctype="multipart/form-data"
+  name="EmailTestForm"
+    >
         <fieldset>
           <legend>Please feel free to send a message</legend>
         
       </form>
   <form name="contact" method="POST" data-netlify="true">
   <p>
-    <label>Your Email: <input type="email" name="email" /></label>
+    <label>Your Email<br> <input type="email" name="email" /></label>
   </p>
   <p>
-    <label>Message: <textarea name="message"></textarea></label>
+    <label>Message<br> <textarea name="message"></textarea></label>
   </p>
 
 <fieldset>
