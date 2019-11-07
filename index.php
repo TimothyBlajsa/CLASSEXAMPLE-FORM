@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+if($_POST["message"]) {
+    mail("your@email.address", "Form to email message", $_POST["message"], "From: an@email.address");
+}
+?>
+<!DOCTYPE php>
 <html lang="en">
 
 <head>
@@ -66,7 +71,7 @@
   </style>
 </head>
 <body>
-  <form action="mailto:tbla3900@stu.raritanval.edu">
+  <form action="https://tbla3900@stu.raritanval.edu">
     <fieldset>
       <legend>Please feel free to send a message</legend>
 
