@@ -12,6 +12,11 @@
   </style>
 </head>
 <body>
+    <form>
+        <fieldset>
+          <legend>Please feel free to send a message</legend>
+        
+      </form>
   <form name="contact" method="POST" data-netlify="true">
   <p>
     <label>Your Email: <input type="email" name="email" /></label>
@@ -19,13 +24,18 @@
   <p>
     <label>Message: <textarea name="message"></textarea></label>
   </p>
+
+<fieldset>
+  <legend>Would you like a reply?</legend>
   <p>
       <input type="radio" name="option" value="yes"> Yes<br>
       <input type="radio" name="option" value="no"> No<br>
     </p>  
   <p>
-    <button type="submit">Send</button>
+    <button type="Submit">Send Message</button>
   </p>
+</fieldset>
 </form>
+</fieldset>
 </body>
 </html>
