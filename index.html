@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,45 +9,92 @@
   <style>
     form {
       font-family: sans-serif;
-      background-color:beige;
+      background-color: beige;
     }
     legend {
       background-color: white;
-      color:rgb(127, 214, 255);
+      color: rgb(127, 214, 255);
       border: 1px solid black;
+    }
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+    }
+    .container:hover input~.checkmark {
+      background-color: #ccc;
+    }
+    .container input:checked~.checkmark {
+      background-color: #2196F3;
+    }
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    .container input:checked~.checkmark:after {
+      display: block;
+    }
+    .container .checkmark:after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
     }
   </style>
 </head>
 <body>
-    <form
-    action="mailto:tbla3900@stu.raritanval.edu"
-    method="POST"
-  enctype="multipart/form-data"
-  name="EmailTestForm"
-    >
-        <fieldset>
-          <legend>Please feel free to send a message</legend>
-        
-      </form>
-  <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Email<br> <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Message<br> <textarea name="message"></textarea></label>
-  </p>
+  <form action="mailto:tbla3900@stu.raritanval.edu" method="POST" enctype="multipart/form-data" name="EmailTestForm">
+    <fieldset>
+      <legend>Please feel free to send a message</legend>
 
-<fieldset>
-  <legend>Would you like a reply?</legend>
-  <p>
-      <input type="radio" name="option" value="yes"> Yes<br>
-      <input type="radio" name="option" value="no"> No<br>
-    </p>  
-  <p>
-    <button type="Submit">Send Message</button>
-  </p>
-</fieldset>
-</form>
-</fieldset>
+  </form>
+  <form name="contact" method="POST" data-netlify="true">
+    <p>
+      <label>Your Email<br> <input type="email" name="email" /></label>
+    </p>
+    <p>
+      <label>Message<br> <textarea name="message"></textarea></label>
+    </p>
+
+    <fieldset>
+      <legend>Would you like a reply?</legend>
+      <label class="container">One
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Two
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <p>
+        <button type="Submit">Send Message</button>
+      </p>
+    </fieldset>
+  </form>
+  </fieldset>
 </body>
+
 </html>
