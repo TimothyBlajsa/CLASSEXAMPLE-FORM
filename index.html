@@ -11,11 +11,13 @@
       font-family: sans-serif;
       background-color: beige;
     }
+
     legend {
       background-color: white;
       color: rgb(127, 214, 255);
       border: 1px solid black;
     }
+
     .container {
       display: block;
       position: relative;
@@ -28,11 +30,13 @@
       -ms-user-select: none;
       user-select: none;
     }
+
     .container input {
       position: absolute;
       opacity: 0;
       cursor: pointer;
     }
+
     .checkmark {
       position: absolute;
       top: 0;
@@ -42,20 +46,25 @@
       background-color: #eee;
       border-radius: 50%;
     }
+
     .container:hover input~.checkmark {
       background-color: #ccc;
     }
+
     .container input:checked~.checkmark {
       background-color: #2196F3;
     }
+
     .checkmark:after {
       content: "";
       position: absolute;
       display: none;
     }
+
     .container input:checked~.checkmark:after {
       display: block;
     }
+
     .container .checkmark:after {
       top: 9px;
       left: 9px;
@@ -65,11 +74,13 @@
     }
   </style>
 </head>
+
 <body>
- <form action="MAILTO:G00273900@stu.raritanval.edu" method="post" enctype="text/plain" name="EmailTestForm" name="contact" method="POST" data-netlify="true">
-   <fieldset>
-     <legend>Please fell free to send a message</legend>
-  </fieldset>
+  <form action="MAILTO:G00273900@stu.raritanval.edu" method="post" enctype="text/plain" name="EmailTestForm"
+    name="contact" method="POST" data-netlify="true">
+    <fieldset>
+      <legend>Please fell free to send a message</legend>
+    </fieldset>
     <p>
       <label>Your Email<br> <input type="email" name="email" /></label>
     </p>
@@ -93,4 +104,5 @@
     </fieldset>
   </form>
 </body>
+
 </html>
